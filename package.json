@@ -9,11 +9,12 @@
     "lint:watch": "npm run lint -- --watch",
     "prestart": "npm run start:message",
     "serve": "babel-node --presets=@babel/env build/build.server.js",
-    "start": "run-p lint:watch test:watch serve --silent",
+    "start": "run-p lint:watch test:watch mock serve --silent",
     "security-check": "npm audit",
     "start:message": "babel-node --presets=@babel/env build/build.startMsg.js",
     "test": "mocha -r ./spec.config.js -r jsdom-global/register ./src/**.spec.js",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "mock": "babel-node --presets=@babel/env build/mock/mock.server.js"
   },
   "repository": {
     "type": "git",
@@ -46,7 +47,8 @@
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5",
     "webpack-dev-middleware": "^3.7.0",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "whatwg-fetch": "^3.0.0"
   },
   "dependencies": {}
 }
