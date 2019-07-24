@@ -28,11 +28,7 @@ This is a generic JavaScript development environment that I build from scratch i
 | express                     | Serves development and production builds                                                                  |
 | html-webpack-plugin         | Generate HTML file programatically via Webpack                                                            |
 | jsdom                       | In-memory DOM for testing                                                                                 |
-| json-schema-faker           | Declare a JSON schema for generating fake data                                                            |
-| json-server                 | Serve a JSON API locally                                                                                  |
-| localtunnel                 | Create a tunnel to your local machine                                                                     |
 | mocha                       | JavaScript testing library                                                                                |
-| nock                        | Mock HTTP requests via Node                                                                               |
 | npm-run-all                 | Display results of multiple commands on single command line                                               |
 | numeral                     | Library for working with numbers                                                                          |
 | open                        | Open app in default browser                                                                               |
