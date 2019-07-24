@@ -19,6 +19,7 @@ mockServer.use(webpackDevMiddleware(compiler, {
 
 mockServer.use(webpackHotMiddleware(compiler));
 
+mockServer.use(express.json())
 mockServer.use("/", mockRouter);
 
 mockServer.listen(port, () => console.log(chalk.green(`\nMocking data at http://localhost:${port}\n`)));

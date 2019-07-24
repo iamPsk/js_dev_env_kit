@@ -1,5 +1,6 @@
 import "./styles/styles.css";
-import getUsers from "./api/usersApi";
+import { getUsers } from "./api/usersApi";
+import { getUser } from "./api/usersApi";
 
 const divComponent = () => {
   let element = document.createElement("div");
@@ -14,6 +15,11 @@ const divComponent = () => {
   return element;
 }
 
-getUsers().then(users => console.log(users));
+getUsers().then(users => {
+  console.log(users);
+});
+
+
+getUser(5).then(user => console.log(user));
 
 document.body.appendChild(divComponent());
