@@ -4,11 +4,14 @@
 }
 
 body{
-  background-color: #f1f1f1;
-  color: #666;
+  background-color: #181818;
+  color: #f1f1f1;
 }
 
 h1{
-  background-color: #1f1f1f;
-  color: #ccc
+  /* background-color: #1f1f1f; */
+  color: #38ec98;
+  font-size: 2em;
+  padding-left: 0.5em;
+  margin-top: 1em;
 }

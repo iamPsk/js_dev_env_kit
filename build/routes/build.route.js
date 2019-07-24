@@ -7,14 +7,14 @@ const buildRouter = express.Router();
 
 buildRouter.use(
   (req, res, next) => {
-    console.log(Date(), req.method);
+    console.log(new Date().toTimeString(), req.method);
     next();
   }
 );
 
 buildRouter.get("/", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "../../index.html")
+    path.join(__dirname, "../../src/index.html")
   )
 })
 
