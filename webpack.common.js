@@ -1,32 +1,21 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin }= require("clean-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = {
-  mode: "development",
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
-    hot: true
-  },
   target: "web",
   entry: [
-    path.resolve(__dirname, "src/index.js"),
-    "webpack-hot-middleware/client"
+    path.resolve(__dirname, "./src/index.js")
   ],
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./src/index.html"
-    }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new HtmlWebpackPlugin(
+      { template: "./src/index.html" }
+    )
   ],
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "./dist/"),
     publicPath: "/"
   },
   module: {

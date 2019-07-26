@@ -2,16 +2,15 @@ import "./styles/styles.css";
 import { getUsers } from "./api/usersApi";
 import { getUser } from "./api/usersApi";
 
+if (process.env.NODE_ENV !== "production") {
+  console.log("Application started in Development mode");
+} else {
+  console.log("Application started in Production mode");
+}
+
 const divComponent = () => {
   let element = document.createElement("div");
   element.setAttribute("id", "header");
-  element.style.borderColor = "#f1f1f1";
-  element.style.borderStyle = "solid";
-  element.style.borderWidth = "thin";  
-  element.style.margin = "1em";
-  element.style.padding = "2em";
-  element.style.width = "240px";
-  element.style.height = "120px";
   return element;
 }
 

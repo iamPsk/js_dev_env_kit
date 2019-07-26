@@ -6,7 +6,7 @@ import { buildRouter } from "./routes/build.route";
 const webpack = require("webpack");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 const webpackHotMiddleware = require("webpack-hot-middleware");
-const config = require("../webpack.config");
+const config = require("../webpack.dev");
 const compiler = webpack(config);
 const server = express();
 const port = process.env.PORT || 3000;

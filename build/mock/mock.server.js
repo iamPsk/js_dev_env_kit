@@ -5,7 +5,7 @@ import { mockRouter } from "./router/mock.routes";
 const webpack = require("webpack");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 const webpackHotMiddleware = require("webpack-hot-middleware");
-const config = require("../../webpack.config");
+const config = require("../../webpack.dev");
 const compiler = webpack(config);
 const mockServer = express();
 const port = process.env.PORT || 3001;

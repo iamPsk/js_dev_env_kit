@@ -4,8 +4,8 @@
   "description": "JavaScript Development environment\r ==================================",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "lint": "esw --color --cache webpack.config.* build src ",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "esw --color --cache webpack.*.* build src ",
     "lint:watch": "npm run lint -- --watch",
     "prestart": "npm run start:message",
     "serve": "babel-node --presets=@babel/env build/build.server.js",
