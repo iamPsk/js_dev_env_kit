@@ -1,8 +1,6 @@
 import express from "express";
 import path from "path";
 
-// console.log('ll');
-
 const buildRouter = express.Router();
 
 buildRouter.use(
