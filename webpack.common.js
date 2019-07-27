@@ -10,16 +10,21 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin(
-      { template: "./src/index.html" }
+      {
+        title: "DevEnv",
+        template: "./src/index.html",
+        inject: "body",
+      }
     )
   ],
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "./dist/"),
-    publicPath: "/"
-  },
   module: {
     rules: [
+      {
+        enforce: "pre",
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: "eslint-loader",
+      },
       {
         test: /\.css$/,
         use: [
