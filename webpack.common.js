@@ -4,9 +4,20 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   target: "web",
-  entry: [
-    path.resolve(__dirname, "./src/index.js")
-  ],
+  entry: {
+    app: "./src/index.js",
+    tasks: "./src/tasks.js",
+  },
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin(
